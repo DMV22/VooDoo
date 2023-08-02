@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify Products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div
+          class="flex justify-between sm:items-start items-center sm:pb-12 pb-6"
+        >
+          <div class="flex justify-between items-start sm:gap-3 gap-1">
+            <img
+              src="./img/logomark.svg"
+              alt="Icon: Logo"
+              class="sm:w-[100%] sm:h-[100%] w-[23px] h-[23px]"
+            />
+            <img
+              src="./img/voodoo-test.svg"
+              alt="Icon: Name"
+              class="sm:w-[100%] sm:h-[100%] w-[108px] h-[50px]"
+            />
+          </div>
+          <div class="flex justify-between items-center sm:gap-12 gap-4">
+            <div class="shopping cursor-pointer">
+              <img src="./img/shopping-cart.svg" alt="Icon: Cart" />
+            </div>
+            <button
+              class="p-3 text-white sm:text-xl text-sm font-bold .not-italic leading-normal rounded bg-black"
+            >
+              Sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <hr class="border border-black border-solid sm:mb-[52px]" />
+
+    <section id="beta-info">
+      <div class="container">
+        <div
+          class="flex justify-between items-center p-6 bg-black text-[#FCF7E6] rounded"
+        >
+          <div class="flex flex-row items-center gap-[6px]">
+            <img src="./img/alert-circle.svg" alt="Icon: Alert" />
+            <h4
+              class="sm:text-base text-xs font-bold .not-italic leading-normal sm:pr-12 pr-6"
+            >
+              ALPHA
+            </h4>
+            <span
+              class="sm:text-sm text-[10px] font-medium .not-italic leading-normal"
+            >
+              Important info regarding our service
+            </span>
+          </div>
+          <button id="dropdownBtn">
+            <img src="./img/chevron-down.svg" alt="Icon: down" />
+          </button>
+        </div>
+        <div
+          id="dropdownContent"
+          class="hidden sm:text-sm text-[10px] bg-black text-[#FCF7E6] p-6 mt-2 rounded"
+        >
+          <!-- Тут може бути прихована інформація про продукти -->
+          <p>
+            We’re working on a new service to offer you returned online goods at
+            a discount near you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <div
+        id="productsList"
+        class="grid xl:grid-cols-4 gap-x-6 gap-y-12 md:grid-cols-3 sm:grid-cols-2"
+      ></div>
+      <div id="pagination" class="mt-[70px] grid justify-center"></div>
+    </main>
+
+    <aside id="cartSidebar" class="cart-sidebar">
+      <div class="pl-9 pt-12 pr-11">
+        <div class="flex justify-between items-start">
+          <!-- Заголовок "Shopping Cart" -->
+          <h2 class="text-2xl font-bold leading-normal text-[#FCF7E6]">
+            Shopping Cart
+          </h2>
+          <div class="close cursor-pointer">
+            <img src="./img/close-line.svg" alt="Icon: Close" />
+          </div>
+        </div>
+        <hr class="text-[#FCF7E6] mt-[22px]" />
+        <!-- Контент кошика тут -->
+        <div
+          id="cartContainer"
+          class="cart-items text-[#FCF7E6] sm:pt-[53px] pt-5"
+        ></div>
+        <hr class="text-[#FCF7E6]" />
+        <div
+          id="cartTotalPrice"
+          class="text-[#FCF7E6] flex justify-between sm:mt-9 mt-5 text-sm font-bold uppercase leading-normal"
+        ></div>
+      </div>
+    </aside>
+
+    <hr class="border border-black border-solid mt-[100px]" />
+
+    <footer id="footer" class="sm:py-[84px] py-[48px] bg-white">
+      <div class="container p-0">
+        <div class="flex justify-between sm:flex-row flex-col sm:gap-0 gap-12">
+          <div class="md:w-[300px]">
+            <img
+              src="./img/logomark-footer.svg"
+              alt="Icon: Logo"
+              class="mr-auto ml-auto pt-2"
+            />
+          </div>
+          <ul class="flex flex-col gap-[19px] md:w-[300px]">
+            <li><a>FAQ</a></li>
+            <li><a>RETURNS</a></li>
+            <li><a>CONTACT</a></li>
+          </ul>
+          <ul class="flex flex-col gap-[19px] md:w-[300px]">
+            <li><a>TERMS & CONDITIONS</a></li>
+            <li><a>PRIVACY POLICY</a></li>
+            <li><a>COOKIE POLICY</a></li>
+            <li><a>COOKIE SETTINGS</a></li>
+          </ul>
+          <ul class="flex flex-col gap-[19px] md:w-[300px]">
+            <li><a>ABOUT SECOND CHANCE</a></li>
+            <li><a>CAREER</a></li>
+            <li><a>FACEBOOK</a></li>
+            <li><a>INSTAGRAM</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
